@@ -1,0 +1,58 @@
+body {
+    margin: 0;
+    padding: 0% 15%;
+}
+
+.flex {
+    display: flex;
+    flex-direction: row;
+}
+
+#riskDependencyGraph {
+    text-align: center;
+}
+
+.summary p {
+    font-size: 20px;
+    display: table;
+    margin: auto;
+}
+
+.bignumber {
+    font-size: 40px;
+    display: table-cell;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.companyCard {
+    display: inline-block;
+    background-color: #fff785;
+    margin: 15px;
+    padding: 10px;
+    min-height: 750px;
+}
+
+.cardImage {
+    width: 350px;
+    height: 350px;
+}
+
+.label {
+    padding: 3px;
+    background-color: #e3cdf3;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+.labelSelected {
+    text-emphasis-style: dot;
+}
+
+div.intro{
+	padding: 30px;
+	margin: 30px;
+	background-color: #d7f7f7;
+	border-radius: 5px;
+    text-decoration: none;"
+}

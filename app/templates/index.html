@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>EV Batteries Risk Analysis - Home</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='bootstrap.css') }}">
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='heroic-features.css') }}">
+</head>
+<body>
+	<!-- navigation Bar -->
+	<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="/index">Home</a>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    <li>
+                        <a href="/dashboard">Dashboard</a>
+                    </li>
+                    <li>
+                        <a href="/contacts">Contacts</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+
+
+    <div class="intro">
+     <h1>Welcome to the EV Battery risk analysis tool.</h1>
+	<p>Investment in any corporation carries with it a certain amount of risk. We can help you to determine the overall investment “health” of companies. Through our Ensemble Platform, we offer a team of professionals with comprehensive services, working together as one, for you...</p>
+    <hr />
+    <p style="text-align: center;"><a href="/dashboard"><button type="button" class="btn btn-primary btn-lg">Go to dashboard &rarr;</button></a></p>
+	</div>
+	
+	<!-- Basic Info -->
+	
+	<!-- Title -->
+        <div class="row">
+            <div class="col-lg-12">
+                <h3>Factors considered for Risk Analysis</h3>
+            </div>
+        </div>
+        <!-- /.row -->
+
+        <!-- Factors for Risk Analysis -->
+        <div class="row text-center">
+
+            <div class="col-md-3 col-sm-6 hero-feature categories-homepage">
+                <div class="thumbnail">
+                    <img src="{{ url_for('static', filename='news.jpg') }}" alt="" height="300" width="300" class="max-height">
+                    <div class="caption">
+                        <h3>News Sentiments</h3>
+                        <p>Global sentiment is a statistically and economically significant contrarian predictor of market returns. Both global and local components of sentiment help to predict the time series of the cross-section; namely, they predict the returns on high sentiment-beta portfolios such as those including high volatility stocks or stocks of small, distressed, and growth companies.</p>
+                        <p>
+                            <a href="https://en.wikipedia.org/wiki/List_of_electric_vehicle_battery_manufacturers" class="btn btn-default">More Info</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+			
+			
+			<div class="col-md-3 col-sm-6 hero-feature max_height categories-homepage">
+                <div class="thumbnail">
+                    <img src="{{ url_for('static', filename='rawMaterial.jpg') }}" alt="" height="300" width="300" class="max-height">
+                    <div class="caption">
+                        <h3>Raw Material</h3>
+                        <p>Prices of EV batteries depends heavily on the cost of its raw material. Change in the cost of raw material can inturn change the price of EV Batteries which can further affect the investment scenario. So, it is essential to consider the trend in cost of raw material before investing.</p><br/>
+                        <p>
+                            <a href="https://en.wikipedia.org/wiki/Electric_vehicle_battery" class="btn btn-default">More Info</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+		</div>
+		<div class="row text-center">
+			
+			<div class="col-md-3 col-sm-6 hero-feature categories-homepage">
+                <div class="thumbnail">
+                    <img src="{{ url_for('static', filename='profit.jpg') }}" alt="" height="300" width="300" class="max-height">
+                    <div class="caption">
+                        <h3>Profit Statements</h3>
+                        <p>Financial statements are formal records of the financial activities of a business.These financial statements all aim to provide an overview of a business’s performance and position, either over time, or at a given point in time.</p>
+                        <p>
+                            <a href="http://evobsession.com/top-electric-car-companies-ev-battery-sales-h1-2015/" class="btn btn-default">More Info</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+			
+			<div class="col-md-3 col-sm-6 hero-feature categories-homepage">
+                <div class="thumbnail">
+                    <img src="{{ url_for('static', filename='stock.jpg') }}" alt="" height="300" width="300" class="max-height">
+                    <div class="caption">
+                        <h3>Stocks</h3>
+                        <p>The stock market has an important role in the allocation of resources, both directly as a source of funds and as a determinant of firms' value and borrowing capacity.</p><br/>
+                        <p>
+                            <a href="https://www.zacks.com/stock/news/255922/beyond-tesla-2-lithium-stocks-to-buy-now" class="btn btn-default">More Info</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <!-- /.row -->
+	
+	
+	
+	
+	
+	<!-- Footer -->
+    <footer>
+        <div class="row">
+            <div class="col-lg-12">
+                <p>Copyright &copy; Team 5 2017</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

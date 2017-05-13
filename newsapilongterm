@@ -1,0 +1,56 @@
+import json
+import requests
+import csv
+import datetime
+
+d = datetime.date.today()
+month = d.month
+year = d.year
+
+api_url_first = 'https://api.nytimes.com/svc/archive/v1/' + str(d.year) + '/' + str(d.month) '.' + 'json?apikey=10b8e6e17fab4129bdb1a5c1fd4e9b8d'
+
+if month != 1:
+	second_month = d.month - 1
+	second_year = d.year
+else:
+	second_month = 12
+	second_year = d.year - 1
+
+api_url_second = 'https://api.nytimes.com/svc/archive/v1/' + str(second_year) + '/' + str(second_month) '.' + 'json?apikey=10b8e6e17fab4129bdb1a5c1fd4e9b8d'
+
+list_of_url_apis = [api_url_first, api_url_second
+					]
+#will have to fix the 
+list_of_dictionaries = ['dicts/distribution/distribution.csv', 'dicts/legal/legal.csv', 'dicts/production/production.csv', 
+'dicts/raw-materials/raw_materials.csv', 'dicts/supplies/supplies.csv']
+list_of_relevant_articles = []
+
+for url in list_of_url_apis:
+	resp = requests.get(url=url)
+	data = json.loads(resp.text)
+
+
+	list_of_articles = data.get('docs')
+
+	for x in list_of_articles:
+		for y in list_of_dictionaries:
+			with open(y, 'rb') as f:
+				reader = csv.reader(f)
+				list_of_keywords = list(reader)[0]
+				for keyword in list_of_keywords:
+					description = x.get('snippet')
+					title = x.get('lead_paragraph')
+					abstract = x.get('abstract')
+					if description != None and title != None and abstract != None:
+						if keyword in description:
+							url = x.get('web_url')
+							list_of_relevant_articles.append(url)
+						elif keyword in title:
+							url = x.get('web_url')
+							list_of_relevant_articles.append(url)
+						elif keyword in abstract:
+							url = x.get('web_url')
+							list_of_relevant_articles.append(url)
+		
+print list_of_relevant_articles
+		
